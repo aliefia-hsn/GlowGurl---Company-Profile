@@ -1,0 +1,251 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #9c0101;
+    /*background: linear-gradient(to right, #e74c3c, #f39c12); Cherry red to gold gradient */
+    color: #9c0101;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #e74c3c; /* Cherry red */
+}
+
+h5 {
+    color: #f39c12; /* Gold color for headings */
+}
+
+header {
+    /*background-color: #9c0101;*/
+    height :300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #9c0101;
+    padding :0;
+    margin: 0;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+#about h1 {
+    margin-bottom: 60px;
+}
+
+#about img {
+    height: 350px;
+    width: 500px; 
+}
+
+#about p {
+    text-align: left;
+    justify-content: first baseline;
+}
+
+#shade-finder p {
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 150px;
+}
+
+#shade-finder h2 {
+    margin-bottom: 50px;
+}
+
+#shade-finder img {
+   width: 300px;
+   height: 200px;
+}
+
+#shade-finder button {
+    margin-top: -50px;
+
+ }
+.navbar {
+    background-color: #9c0101;  /* Cherry Red */
+}
+
+/* Ensure the text in navbar is white */
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link:hover {
+    color: #f39c12 !important; /* Gold hover effect */
+}
+
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+footer {
+    background-color: cherryred;
+    color: white;
+}
+.quiz-step {
+    animation: fadeIn 0.5s ease-in-out;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.progress {
+    height: 20px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #e74c3c;
+    transition: width 0.4s ease;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.quiz-step button {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.quiz-step button:hover {
+    background-color: #d63031; /* Darker red for hover */
+    transform: scale(1.05);
+}
+
+.quiz-step button:focus {
+    outline: none;
+}
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+}
+
+#quiz-modal .modal-content {
+    background-color: #fff; 
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-body h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .quiz-step button {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+section {
+    width: 100%;  /* Make sections take up the full width of the screen */
+    margin: 0;    /* Remove any margin */
+    padding: 0;   /* Remove any padding */
+    box-sizing: border-box; /* Ensure padding doesn't add extra width */
+}
+
+#about, #products, #testimonials, #shade-finder {
+    min-height: 500px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   /* background-color: #fff; */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 50px 0;
+    flex-direction: column;
+
+}
+
+/* Style for Product Cards */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the card */
+    border: none; /* Removes default border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    background-color: #9c0101;
+
+}
+
+.card-body {
+    background-color: #9c0101;
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lifts the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow on hover */
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #fff;
+}
+/* Style for the active card */
+.active-card {
+    border: 2px solid #f39c12; /* Gold border */
+    box-shadow: 0 8px 16px rgba(243, 156, 18, 0.4); /* Glow effect */
+}
